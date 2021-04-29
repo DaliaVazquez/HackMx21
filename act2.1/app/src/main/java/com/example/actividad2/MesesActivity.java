@@ -1,5 +1,6 @@
 package com.example.actividad2;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -7,12 +8,16 @@ import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -24,12 +29,19 @@ public class MesesActivity extends AppCompatActivity  implements Handler.Callbac
     private Handler handler;
     JSONArray datos;
     private static String info;
+    private FirebaseAuth mAuth;
+    private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meses);
-
+        textView = findViewById(R.id.hola);
+        mAuth = FirebaseAuth.getInstance();
+        FirebaseUser user = mAuth.getCurrentUser();
+        if(user != null){
+            textView.setText("Hello "+user.getDisplayName());
+        }
         handler=new Handler(Looper.getMainLooper(),this);
     }
 
@@ -71,6 +83,13 @@ public class MesesActivity extends AppCompatActivity  implements Handler.Callbac
             e.printStackTrace();
         }
         return true;
+    }
+    public void goBack(View v){
+        mAuth.signOut();
+        Intent i = new Intent();
+        setResult(Activity.RESULT_OK, i);
+
+        finish();
     }
 
     public void toInfo(View v, int pos) {

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:text="escribe la respuesta"
+        app:layout_constraintBottom_toTopOf="@+id/respuestaText"
+        app:layout_constraintEnd_toEndOf="@+id/respuestaText"
+        app:layout_constraintStart_toStartOf="@+id/respuestaText" />
+
+    <EditText
+        android:id="@+id/correo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="correo"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/textNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:hint="nombre"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/correo"
+        app:layout_constraintTop_toBottomOf="@+id/correo" />
+
+    <EditText
+        android:id="@+id/passwordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="contraseña"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/textNombre"
+        app:layout_constraintTop_toBottomOf="@+id/textNombre" />
+
+    <EditText
+        android:id="@+id/preguntaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:ems="10"
+        android:hint="pregunta"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/textView11"
+        app:layout_constraintStart_toStartOf="@+id/passwordText" />
+
+    <EditText
+        android:id="@+id/respuestaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="respuesta"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintStart_toStartOf="@+id/preguntaText" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:onClick="saveUser"
+        android:text="crear"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintStart_toStartOf="@+id/button5" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="130dp"
+        android:onClick="goBack"
+        android:text="atras"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="19dp"
+        android:text="escribe la pregunta de seguridad"
+        app:layout_constraintBottom_toTopOf="@+id/preguntaText"
+        app:layout_constraintEnd_toEndOf="@+id/preguntaText" />
+</androidx.constraintlayout.widget.ConstraintLayout>

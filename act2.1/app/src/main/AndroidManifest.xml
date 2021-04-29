@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Actividad2">
         <activity android:name=".infoMes"></activity>
+        <activity android:name=".CrearCuenta"></activity>
         <activity android:name=".MesesActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
