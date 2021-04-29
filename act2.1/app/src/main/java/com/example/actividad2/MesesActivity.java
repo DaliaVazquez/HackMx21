@@ -63,7 +63,7 @@ public class MesesActivity extends AppCompatActivity  implements Handler.Callbac
                 Log.wtf("JSON",temp.getString("nombre"));
                 Log.wtf("JSON",temp.getString("hobby"));
 
-                AmigosFragment recyclerViewFragment= AmigosFragment.newInstance(datos);
+                MesesFragment recyclerViewFragment= MesesFragment.newInstance(datos);
                 cambiarFragmento(recyclerViewFragment);
 
             }

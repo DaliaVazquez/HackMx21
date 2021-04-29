@@ -1,6 +1,5 @@
 package com.example.actividad2;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -18,7 +17,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 
-public class AmigosFragment extends Fragment implements View.OnClickListener {
+public class MesesFragment extends Fragment implements View.OnClickListener {
 
     //private ArrayList<String> data;
     public RecyclerView recyclerView;
@@ -63,10 +62,10 @@ public class AmigosFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v=inflater.inflate(R.layout.fragment_amigos, container, false);
+        View v=inflater.inflate(R.layout.fragment_meses, container, false);
         recyclerView = v.findViewById(R.id.recyclerView);
 
-        amigosAdapter adapter = new amigosAdapter(ArrayListdatos, this);
+        mesAdapter adapter = new mesAdapter(ArrayListdatos, this);
         LinearLayoutManager llm=new LinearLayoutManager(getContext());
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(llm);
@@ -74,8 +73,8 @@ public class AmigosFragment extends Fragment implements View.OnClickListener {
         return v;
     }
 
-    public static AmigosFragment newInstance(JSONArray json) throws JSONException{
-        AmigosFragment fragment=new AmigosFragment();
+    public static MesesFragment newInstance(JSONArray json) throws JSONException{
+        MesesFragment fragment=new MesesFragment();
         ArrayListdatos=new ArrayList<String>();
         Bundle args=new Bundle();
         if(json!=null){

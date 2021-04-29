@@ -1,11 +1,8 @@
 package com.example.actividad2;
 
-import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,14 +12,14 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class amigosAdapter extends RecyclerView.Adapter<amigosAdapter.AmigosViewHolder>{
+public class mesAdapter extends RecyclerView.Adapter<mesAdapter.AmigosViewHolder>{
     private static final int EXAMPLE_CODE = 0;
     private ArrayList<String> data;
     private View.OnClickListener listener;
     private static final String ARG_PARAM1 = "message";
     private String message;
 
-    public amigosAdapter(ArrayList<String> data, View.OnClickListener listener){
+    public mesAdapter(ArrayList<String> data, View.OnClickListener listener){
         this.listener = listener;
         this.data = data;
     }
