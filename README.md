@@ -1,6 +1,6 @@
 # HackMx21
 hackmx 2021
-###Descripción 
+###H3 headerDescripción 
 App que esté conectada a tu cuenta bancaria, donde tú le pongas como los montos a gastar durante tu mes y en que áreas se gastan esos montos, si se pasa de ese monto o la tienda no aparece en el área que pusiste no te deje realizar el pago.
 Se modificar el monto o las áreas de gasto en cualquier momento, pero con una pregunta de seguridad, si la respondes mal, la app activa el gps y cámara frontal y guarda ubicación y foto en la nube, si la respondes mal, la app activa el gps y cámara frontal y guarda ubicación y foto en la nube. Si se responde mal 3 intentos la cuenta se bloquea por algunas hrs.
  hrs.
